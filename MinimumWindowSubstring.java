@@ -41,6 +41,8 @@ class MinimumWindowSubstring {
                 // get the charater the slow pointer points to, if it isn't a character in t
                 // if it isn't a character in t, we continue to next move
                 // if it is a character in t, we update wordDict and the matchCount remaining
+                // when moved to a place where the substring is not valid anymore, jump out of 
+                // while loop and move the fast pointer
                 char leftmost = s.charAt(slow++);
                 Integer leftmostCount = wordDict.get(leftmost);
                 if (leftmostCount == null) {
